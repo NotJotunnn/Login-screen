@@ -1,0 +1,71 @@
+/* Globais */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+    --Poppins: 'Poppins', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: var(--text-base);
+}
+
+h1 {
+    color: var(--text-title);
+}
+
+
+body {
+    background-color: var(--background);
+}
+
+form {
+    /* border: 2px solid red; */
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.field {
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    width: 25px;
+    height: 25px;
+}
+
+.showword, .mail, .password {
+    width: 20px;
+    height: 20px;
+    /* border: 2px solid red; */
+}
+
+.inline {
+    display: flex;
+
+}
+
+.extra {
+    display: flex;
+    justify-content: space-between;
+}
+
+input:checked[type="checkbox"] {
+    background-color: var(--primary-color);
+}
