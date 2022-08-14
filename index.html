@@ -1,46 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/Login/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <link rel="shortcut icon" href="./Login/images/favicon.ico" type="image/x-icon">
+    <title>Login screen</title>
 </head>
 <body>
-    <svg class="logo"><image href="../assets/Login/images/logo.svg"></image></svg>
+    <section class="login">
+        <svg class="logo"><image href="./Login/images/logo.svg"></image></svg>
 
-    <form action="post">
-        <header>
-            <div class="inline">
-                <svg class="login"><image href="../assets/Login/images/log-in.svg"></image></svg>
-                <h1>Faça seu login</h1>
+        <!-- == Form == -->
+        <div class="background">
+            <div class="form">
+                    <div class="topside">
+                        <div class="header">
+                            <svg><image href="./Login/images/log-in.svg"></image></svg>
+                            <h1>Faça seu login</h1>
+                        </div>
+                        <p>Entre com suas informações de cadastro.</p>
+                    </div>
+                <form action="post">
+                    <label class="label" for="mail">
+                        <h2>E-mail:</h2>
+                        <div class="field">
+                            <svg><image href="./Login/images/mail.svg"></image></svg>
+                            <input type="email" name="email" id="mail" placeholder="Digite sua e-mail">
+                        </div>
+                    </label>
+                    <label class="label" for="password">
+                        <h2>Senha:</h2>
+                        <div class="field">
+                            <svg><image href="./Login/images/lock.svg"></image></svg>
+                            <input type="password" name="senha" id="password" placeholder="Digite sua senha">
+                            <svg><image href="./Login/images/eye.svg"></image></svg>
+                        </div>
+                    </label>
+                    <div class="botside">
+                        <label class="label" for="remember">
+                            <input type="checkbox" name="lembrar" id="remmeber"><p>Lembre-me</p>
+                        </label>
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+                    <button>Entrar</button>
+            
+                    <a class="center" href="#">Não tem uma conta? <span class="bold">Registre-se</span></a>
+                </form>
             </div>
-            <p>Entre com suas informações de cadastro.</p>
-        </header>
-
-        <main>
-            <label for="email">
-                <p>E-mail</p>
-                <div class="field"><span><svg class="mail"><image href="../assets/Login/images/mail.svg"></image></svg></span><input type="email" name="mail" id="email"></div>
-            </label>
-
-            <label for="senha">
-                <p>Senha</p>
-                <div class="field"><span><svg class="password"><image href="../assets/Login/images/lock.svg"></image></svg></span><input type="password" name="senha" id="senha"><span><svg class="showword"><image href="../assets/Login/images/eye.svg"></image></svg></span></div>
-            </label>
-
-            <div class="extra">
-                <label for="remember">
-                    <input type="checkbox" name="lembrar" id="remember"><span>Lembre-me</span>
-                </label>
-                <p><a href="#">Esqueci minha senha</a></p>
-            </div>
-
-            <button>ENTRAR</button>
-            <p><a href="#">Não tem uma conta? <span class="bold">Registre-se</span></a></p>
-        </main>
-    </form>
+        </div>
+    </section>
 </body>
 </html>

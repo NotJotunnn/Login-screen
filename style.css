@@ -1,6 +1,4 @@
-/* Globais */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+/* Globals */
 
 :root {
     --text-base: #afb6c2;
@@ -8,64 +6,199 @@
     --background: #191816;
     --form-background: #24221f;
     --primary-color: #ffc632;
-    --Poppins: 'Poppins', sans-serif;
-    --Roboto: 'Roboto', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
 * {
-    margin: 0px;
-    padding: 0px;
-    color: var(--text-base);
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+
 }
 
-h1 {
-    color: var(--text-title);
+body, html {
+    overflow-x: hidden;
 }
 
-
-body {
-    background-color: var(--background);
-}
-
-form {
-    /* border: 2px solid red; */
-    width: 270px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
+svg {
+    width: 20px;
+    height: 20px;
+    /* border: 5px solid red; */
 }
 
 a {
     text-decoration: none;
+    display: block;
     color: var(--primary-color);
 }
 
-.field {
+body {
+    background: url("Login/images/side-image-2x.jpg") no-repeat center;
+    background-size: cover;
+}
+
+section {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    height: 100vh;
+    width: 30vw;
+    /* border: 5px solid red; */
+    background-color: var(--background);
+}
+
+/* Logo */
+
+.logo {
+    width: 115px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    /* border: 5px solid red; */
+}
+
+/* Topside */
+
+.topside {
+    margin: 10px auto;
+    /* border: 5px solid red; */
+    width: 100%;
+}
+
+/* Login header */
+
+.header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 10px;
 }
 
-.login {
+.header svg {
     width: 25px;
     height: 25px;
+    /* border: 5px solid red; */
 }
 
-.showword, .mail, .password {
-    width: 20px;
-    height: 20px;
-    /* border: 2px solid red; */
+.header h1 {
+    display: inline;
 }
 
-.inline {
+/* Form */
+
+.form {
     display: flex;
-
+    margin: 20px auto;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    /* height: 40%; */
+    /* margin: 10px auto; */
+    /* border: 5px solid red; */
+    color: var(--text-base);
 }
 
-.extra {
+.form h1 {
+    color: var(--text-title);
+}
+
+.form form {
+    width: 100%;
+}
+
+/* Form mail/password/remember */
+
+.form .label {
+    margin: 10px;
+}
+
+/* Form fields */
+
+label h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.field input {
+    border: none;
+    margin-right: 132px;
+    background-color: var(--form-background);
+    outline: none;
+    color: var(--text-base);
+}
+
+.field svg {
+    margin-right: 5px;
+}
+
+.field {
+    border: 1px solid grey;
     display: flex;
+    align-items: center;
+    padding: 7px;
+    border-radius: 2px;
+}
+
+/* Remember */
+
+/* .form label[for="remember"] {
+    border: 5px solid red;
+} */
+
+.form label[for="remember"] p{
+    display: inline;
+    /* border: 5px solid red; */
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+.botside {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
-input:checked[type="checkbox"] {
+/* .botside a {
+    display: inline;
+    margin-left: 100px;
+    border: 5px solid red; 
+} */
+
+/* Form button */
+
+.form button {
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    margin: 10px 0;
+    border: none;
+    border-radius: 3px;
     background-color: var(--primary-color);
+    font-weight: bold;
 }
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Background */
+
+.background {
+    background-color: var(--form-background);
+    padding: 20px 0 35px;
+    margin: 60px auto 0;
+    width: 85%;
+}
+
+
+
+
