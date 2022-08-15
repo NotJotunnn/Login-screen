@@ -35,8 +35,11 @@ a {
 }
 
 body {
-    background: url("Login/images/side-image-2x.jpg") no-repeat center;
-    background-size: cover;
+    display: flex;
+}
+
+input[type="checkbox"] {
+    display: none;
 }
 
 section {
@@ -47,6 +50,11 @@ section {
     width: 30vw;
     /* border: 5px solid red; */
     background-color: var(--background);
+}
+
+.container p {
+    display: inline;
+    font-size: 16px;
 }
 
 /* Logo */
@@ -153,7 +161,12 @@ label h2 {
     display: inline;
     /* border: 5px solid red; */
     margin-left: 5px;
-    margin-right: 0;
+    /* margin-right: 0; */
+}
+
+.form label[for="remember"] {
+    display: flex;
+    align-items: center;
 }
 
 .botside {
@@ -161,7 +174,83 @@ label h2 {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    /* border: 2px solid red; */
 }
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+p {
+    display: inline;
+    font-size: 16px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+.container p {
+    position: relative;
+    top: 2px;
+    right: 8px;
+    color: var(--text-base);
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--form-background);
+    border: 1px solid var(--text-base);
+    border-radius: 5px;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+}
+
+.checkmark:after {
+    content: url(./Login/images/check.svg);
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    width: 5px;
+    height: 10px;
+}
+  
+
+/* .botside label {
+    border: 2px solid red;
+    width: 220px;
+} */
+
 
 /* .botside a {
     display: inline;
@@ -199,6 +288,47 @@ label h2 {
     width: 85%;
 }
 
+.login {
+    min-width: 670px;
+}
 
+.imagesection {
+    background: url("Login/images/side-image-2x.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    width: 70vw;
+}
 
+/* == Mobile == */
 
+@media only screen and (max-width:850px) {
+    /* body {
+        background-color: var(--background);
+    } */
+
+    .login {
+        width: 100%;
+    }
+
+    .background {
+        width: 560px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .form .field input {
+        background-color: var(--background);
+    }
+
+    /* .form {
+        position: relative;
+        left: 40px;
+    } */
+
+    .imagesection {
+        display: none;
+    }
+
+    .checkmark {
+        background-color: var(--background);
+    }
+}
